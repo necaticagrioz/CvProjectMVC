@@ -1,0 +1,29 @@
+﻿@using CvProjectMVC.Models.Entity
+@model List<TblYetenek>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Yetenekler</h2>
+    <div class="subheading mb-3">Programlama Dilleri & Araçlar</div>
+    <ul class="list-inline dev-icons">
+        <li class="list-inline-item"><i class="devicon-visualstudio-plain"></i></li>
+        <li class="list-inline-item"><i class="devicon-csharp-plain"></i></li>
+        <li class="list-inline-item"><i class="devicon-dot-net-plain"></i></li>
+        <li class="list-inline-item"><i class="devicon-microsoftsqlserver-plain"></i></li>
+        <li class="list-inline-item"><i class="fas fa-database"></i></li>
+        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+        <li class="list-inline-item"><i class="devicon-figma-plain"></i></li>
+    </ul>
+    <div class="subheading mb-3">Beceriler</div>
+    <ul class="fa-ul mb-0">
+        @foreach (var x in Model)
+        {
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                @x.Yetenek
+            </li>
+        }
+
+    </ul>
+</div>
+
